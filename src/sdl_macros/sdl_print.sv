@@ -21,7 +21,9 @@
 `define SDL_PRINT_SVH
 
 
-`define sdl_info(MSG,VERBOSITY) `uvm_info("SDL-SV", MSG, VERBOSITY)
+`define sdl_info(MSG,VERBOSITY)  `uvm_info ("SDL-SV", MSG, VERBOSITY)
+`define sdl_warning(MSG)         `uvm_warning ("SDL-SV", MSG)
+`define sdl_error(MSG)           `uvm_error("SDL-SV", MSG)
 
 `endif
 
