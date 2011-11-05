@@ -1,4 +1,0 @@
--nocopyright
--COMPILEONLY
--cdslib ./INCA_libs/irun.lnx8664.10.20.nc/ncsc_run/cds.lib
--hdlvar ./INCA_libs/irun.lnx8664.10.20.nc/ncsc_run/hdl.var

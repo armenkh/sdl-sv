@@ -1,7 +1,0 @@
-define NCSIMRC	( /appl/IES/10.2/015/tools/inca/files/ncsimrc, ~/.ncsimrc )
-include ./hdlrun.var
-define SNAPSHOT worklib.fsm_test:sv
-DEFINE RUNMODEDEFAULT 1
-DEFINE LIB_MAP ($LIB_MAP, + => worklib )
-define ELAB_SNAPSHOT
-define SNAPSHOT worklib.fsm_test:sv
