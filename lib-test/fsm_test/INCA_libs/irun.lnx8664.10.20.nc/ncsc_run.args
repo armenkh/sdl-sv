@@ -1,0 +1,31 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-RUNMODE
+-q
+-stop
+link
+-NOSYSTEMCLINK
+-novic
+-noscv
+-noedg
+-asext
+.s
+-ccext
+.c
+-objext
+.o
+-cxxext
+.cpp
+-cxxext
+.cc
+-ncscrc
+./INCA_libs/irun.lnx8664.10.20.nc/ncsc_run
+-log
+./INCA_libs/irun.lnx8664.10.20.nc/ncsc_run.log
+/appl/uvm/src/dpi/uvm_dpi.cc
+-test
+./INCA_libs/irun.lnx8664.10.20.nc/run
+-I/appl/IES/10.2/015/tools/include
+-I/appl/IES/10.2/015/tools/inca/include

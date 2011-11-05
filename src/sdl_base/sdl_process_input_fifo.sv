@@ -44,7 +44,14 @@
     while (this.size() == 0) #1;
     arg = m_signal_queue.pop_back();
   endtask
-
+  
+  task sdl_process_input_fifo_base::sdl_get_signal (output sdl_signal_base s,
+                       input sdl_signal_base priority_signals [],
+                       input sdl_signal_base save_signals []
+                       );
+                        
+  endtask 
+                            
   function bit sdl_process_input_fifo_base::try_get_signal (output sdl_signal_base arg);
     if (this.size() == 0)
     	return 0;

@@ -19,7 +19,7 @@
 
 `ifndef SDL_MACROS_SVH
 `define SDL_MACROS_SVH
-
+  `include "sdl_macros/sdl_common_defines.svh"
   `include "sdl_macros/sdl_version_defines.svh"
   `include "sdl_macros/sdl_print.sv"
   

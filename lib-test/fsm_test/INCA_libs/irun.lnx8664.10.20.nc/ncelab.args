@@ -1,0 +1,24 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
++UVM_VERBOSITY=UVM_LOW
++define+UVM_REPORT_DISABLE_FILE
++define+UVM_REPORT_DISABLE_LINE
+-loadpli
+/appl/IES/10.2/015/tools/uvm/uvm_lib/uvm_sv/lib/64bit/libuvmpli.so:uvm_pli_boot
+-ACCESS
+rw
+-loadrun
+./INCA_libs/irun.lnx8664.10.20.nc/librun
+-XLMODE
+./INCA_libs/irun.lnx8664.10.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.10.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.10.20.nc/hdl.var
+-WORK
+worklib
+-HASCC
+-HASXLMODE

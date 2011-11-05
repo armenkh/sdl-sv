@@ -24,14 +24,14 @@
 virtual class sdl_if_base extends uvm_tlm_if_base #(sdl_signal_base, sdl_signal_base);
 
   virtual task put_signal( input sdl_signal_base t );
-    uvm_report_error("put_signal", `TASK_ERROR, UVM_NONE);
+    uvm_report_error("put_signal", `SIG_FIFO_TASK_ERROR, UVM_NONE);
   endtask
   virtual task get_signal (output sdl_signal_base arg);
-    uvm_report_error("get_signal", `TASK_ERROR, UVM_NONE);
+    uvm_report_error("get_signal", `SIG_FIFO_TASK_ERROR, UVM_NONE);
   endtask
   
   virtual function bit try_get_signal (output sdl_signal_base arg);
-  	uvm_report_error("try_get_signal", `FUNCTION_ERROR, UVM_NONE);
+  	uvm_report_error("try_get_signal", `SIG_FIFO_FUNCTION_ERROR, UVM_NONE);
   endfunction
   
 endclass

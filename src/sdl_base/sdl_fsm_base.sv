@@ -161,6 +161,11 @@ class sdl_fsm_base #(type P = sdl_signal_base)
     end
   endtask
 
+// UVM build_phase
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+  endfunction  
+
 endclass
 
 `define DEFINE_SDL_STATE(STATE_NAME) class STATE_NAME \

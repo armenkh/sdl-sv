@@ -1,0 +1,86 @@
+/appl/IES/10.2/015/tools.lnx86/systemc/gcc/bin/ncgcc: line 147: /usr/lib/x86_64-linux-gnu: Is a directory
+/appl/IES/10.2/015/tools.lnx86/systemc/gcc/bin/ncgcc: line 147: /usr/lib/x86_64-linux-gnu: Is a directory
+$CDSROOT = /appl/IES/10.2/015
+$TESTDIR = /media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test
+
+TOOL:	ncsc(64)	10.20-s013
+ncsc C++ parameters: 
+	ncsc -COMPILER $CDSROOT/tools/systemc/gcc/4.4-x86_64/bin/g++ 
+	-f ./INCA_libs/irun.lnx8664.10.20.nc/ncsc_run/ncsc_obj/ncsc.args
+	-MANUAL 
+	-CFLAGS "-DNCSC
+		-I$CDSROOT/tools/systemc/include_pch
+		-I$CDSROOT/tools/tbsc/include
+		-I$CDSROOT/tools/vic/include
+		-I$CDSROOT/tools/ovm/sc/src
+		-I$CDSROOT/tools/uvm/uvm_lib/uvm_sc/sc
+		-I$CDSROOT/tools/uvm/uvm_lib/uvm_ml/sc
+		-I$CDSROOT/tools/systemc/include/tlm2
+		-fPIC
+		-c
+		-x c++  -Wall
+		-I$CDSROOT/tools/include
+		-I$CDSROOT/tools/inca/include"
+
+make[1]: Entering directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
+ncsc: compiling $/appl/uvm/src/dpi/uvm_dpi.cc
+make[1]: Leaving directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
+
+make[1]: Entering directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
+building library run.so
+/appl/IES/10.2/015/tools.lnx86/systemc/gcc/bin/ncgcc: line 147: /usr/lib/x86_64-linux-gnu: Is a directory
+/appl/IES/10.2/015/tools.lnx86/systemc/gcc/bin/ncgcc: line 147: /usr/lib/x86_64-linux-gnu: Is a directory
+make[1]: Leaving directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
+
+	Top level design units:
+		uvm_pkg
+		sdl_pkg
+		fsm_test
+  m_fsm.Result.set_values(m_fsm.sum);
+                        |
+ncelab: *W,FUNNOV (./fsm_test.sv,87|24): function called as a task without void'().
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /appl/IES/10.2/015/tools/inca/files/ncsimrc
+ncsim> source /appl/IES/10.2/015/tools/uvm/uvm_lib/uvm_sv/files/tcl/uvm_sim.tcl
+ncsim> run
+SVSEED default: 1
+----------------------------------------------------------------
+UVM-1.0p1
+(C) 2007-2011 Mentor Graphics Corporation
+(C) 2007-2011 Cadence Design Systems, Inc.
+(C) 2006-2011 Synopsys, Inc.
+----------------------------------------------------------------
+UVM_INFO @ 0: reporter [RNTST] Running test ...
+UVM_INFO @ 0: server [SDL-SV] State: WaitConReq, has been registered.
+UVM_INFO @ 0: server [SDL-SV] State: WaitQuery, has been registered.
+UVM_INFO @ 0: server [SDL-SV] Signal: ConnectRequestAck, has been registered.
+UVM_INFO @ 0: server [SDL-SV] Signal: Result, has been registered.
+UVM_INFO @ 1: server [SDL-SV] FSM got new signal: ConnectRequest
+UVM_INFO @ 1: reporter [SDL-SV] FSM sends signal: ConnectRequestAck
+UVM_INFO @ 1: reporter [SDL-SV] FSM changes state to: WaitQuery
+UVM_INFO @ 1: env [SDL-SV] Env got: ConnectRequestAck
+UVM_INFO @ 1: env [SDL-SV] CLIENT Sends:           2,           3
+UVM_INFO @ 2: server [SDL-SV] FSM got new signal: Query
+UVM_INFO @ 2: reporter [SDL-SV] FSM sends signal: Result
+UVM_INFO @ 2: reporter [SDL-SV] FSM changes state to: WaitConReq
+UVM_INFO @ 2: env [SDL-SV] Env got: Result
+UVM_INFO @ 2: env [SDL-SV] SERVER Returns:           5
+UVM_INFO @ 2: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   16
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[SDL-SV]    14
+[TEST_DONE]     1
+Simulation complete via $finish(1) at time 2 NS + 40
+/appl/uvm/src/base/uvm_root.svh:392     $finish;
+ncsim> exit

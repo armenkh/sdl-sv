@@ -1,0 +1,31 @@
+$CDSROOT = /appl/IES/10.2/015
+$TESTDIR = /media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test
+
+TOOL:	ncsc(64)	10.20-s013
+ncsc C++ parameters: 
+	ncsc -COMPILER $CDSROOT/tools/systemc/gcc/4.4-x86_64/bin/g++ 
+	-f ./INCA_libs/irun.lnx8664.10.20.nc/ncsc_run/ncsc_obj/ncsc.args
+	-MANUAL 
+	-CFLAGS "-DNCSC
+		-I$CDSROOT/tools/systemc/include_pch
+		-I$CDSROOT/tools/tbsc/include
+		-I$CDSROOT/tools/vic/include
+		-I$CDSROOT/tools/ovm/sc/src
+		-I$CDSROOT/tools/uvm/uvm_lib/uvm_sc/sc
+		-I$CDSROOT/tools/uvm/uvm_lib/uvm_ml/sc
+		-I$CDSROOT/tools/systemc/include/tlm2
+		-fPIC
+		-c
+		-x c++  -Wall
+		-I$CDSROOT/tools/include
+		-I$CDSROOT/tools/inca/include"
+
+make[1]: Entering directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
+ncsc: compiling $/appl/uvm/src/dpi/uvm_dpi.cc
+make[1]: Leaving directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
+
+make[1]: Entering directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
+building library run.so
+/appl/IES/10.2/015/tools.lnx86/systemc/gcc/bin/ncgcc: line 147: /usr/lib/x86_64-linux-gnu: Is a directory
+/appl/IES/10.2/015/tools.lnx86/systemc/gcc/bin/ncgcc: line 147: /usr/lib/x86_64-linux-gnu: Is a directory
+make[1]: Leaving directory `/media/sda3/data/repository/sdl_uvm_lib/lib-test/fsm_test'
